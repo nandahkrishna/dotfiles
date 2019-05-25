@@ -42,3 +42,9 @@ function addmyremote() {
 function addmyorigin() {
   addorigin nandahkrishna/$1
 }
+
+function acp() {
+  add
+  commit $1
+  pushob
+}
