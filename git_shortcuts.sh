@@ -22,3 +22,23 @@ function pushob() {
 function commit() {
   git commit -m $1
 }
+
+function add() {
+  git add .
+}
+
+function addremote() {
+  git remote add $1 https://github.com/$2
+}
+
+function addorigin() {
+  addremote origin $1
+}
+
+function addmyremote() {
+  addremote $1 nandahkrishna/$2
+}
+
+function addmyorigin() {
+  addorigin nandahkrishna/$1
+}
