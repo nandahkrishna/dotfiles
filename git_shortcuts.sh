@@ -20,7 +20,7 @@ function pushob() {
 }
 
 function commit() {
-  git commit -m $1
+  git commit -m "$1"
 }
 
 function add() {
@@ -45,6 +45,6 @@ function addmyorigin() {
 
 function acp() {
   add
-  commit $1
+  commit "$1"
   pushob
 }
