@@ -1,2 +1,2 @@
 # Shell
-Shell commands and programs
+Shell commands, shortcuts and programs I use often in the Terminal.
