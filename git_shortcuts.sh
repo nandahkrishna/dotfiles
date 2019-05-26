@@ -28,7 +28,7 @@ function add() {
 }
 
 function addremote() {
-  git remote add $1 https://github.com/$2
+  git remote add $1 https://github.com/$2.git
 }
 
 function addorigin() {
