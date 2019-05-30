@@ -48,3 +48,7 @@ function acp() {
   commit "$1"
   pushob
 }
+
+function clone() {
+  git clone https://github.com/$1/$2
+}
