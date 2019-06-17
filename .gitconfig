@@ -1,0 +1,18 @@
+[user]
+	name = nandahkrishna
+	email = nanda.harishankar@gmail.com
+	signingkey = 067E5FCD58ADF3AA
+[core]
+[core]
+	excludesfile = /Users/nanda/.gitignore_global
+[commit]
+	gpgsign = true
+[gpg]
+	program = gpg
+[tag]
+	gpgsign = true
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
