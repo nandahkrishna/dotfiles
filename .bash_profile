@@ -15,13 +15,16 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 conda activate dev
+
 powerline-daemon -q
 POWERLINE_BASH_CONTINUATION=1
 POWERLINE_BASH_SELECT=1
 . /Users/nanda/miniconda3/envs/dev/lib/python3.7/site-packages/powerline/bindings/bash/powerline.sh
+
 export LDFLAGS=-L/usr/local/opt/opencv@3/lib
 export CPPFLAGS=-I/usr/local/opt/opencv@3/include
 export PKG_CONFIG_PATH=/usr/local/opt/opencv@3/lib/pkgconfig
+
 export GPG_TTY=$(tty)
 [ -f ~/.gnupg/gpg-agent-info ] && source ~/.gnupg/gpg-agent-info
 if [ -S "${GPG_AGENT_INFO%%:*}" ]; then
@@ -29,5 +32,11 @@ if [ -S "${GPG_AGENT_INFO%%:*}" ]; then
 else
     eval $( gpg-agent --daemon --options ~/.gnupg/gpg-agent.conf )
 fi
+
 source ~/.git_shortcuts
 
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/nanda/miniconda3/gcloudsdk/path.bash.inc' ]; then . '/Users/nanda/miniconda3/gcloudsdk/path.bash.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/nanda/miniconda3/gcloudsdk/completion.bash.inc' ]; then . '/Users/nanda/miniconda3/gcloudsdk/completion.bash.inc'; fi
