@@ -21,9 +21,9 @@ POWERLINE_BASH_CONTINUATION=1
 POWERLINE_BASH_SELECT=1
 . /Users/nanda/miniconda3/envs/dev/lib/python3.7/site-packages/powerline/bindings/bash/powerline.sh
 
-export LDFLAGS=-L/usr/local/opt/opencv@3/lib
-export CPPFLAGS=-I/usr/local/opt/opencv@3/include
-export PKG_CONFIG_PATH=/usr/local/opt/opencv@3/lib/pkgconfig
+export LDFLAGS="-L/usr/local/opt/opencv@3/lib"
+export CPPFLAGS="-I/usr/local/opt/opencv@3/include"
+export PKG_CONFIG_PATH="/usr/local/opt/opencv@3/lib/pkgconfig"
 
 export GPG_TTY=$(tty)
 [ -f ~/.gnupg/gpg-agent-info ] && source ~/.gnupg/gpg-agent-info
