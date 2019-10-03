@@ -24,6 +24,7 @@ POWERLINE_BASH_SELECT=1
 export LDFLAGS="-L/usr/local/opt/opencv@3/lib"
 export CPPFLAGS="-I/usr/local/opt/opencv@3/include"
 export PKG_CONFIG_PATH="/usr/local/opt/opencv@3/lib/pkgconfig"
+export PATH="$PATH:/usr/local/sbin"
 
 export GPG_TTY=$(tty)
 [ -f ~/.gnupg/gpg-agent-info ] && source ~/.gnupg/gpg-agent-info
