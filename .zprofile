@@ -1,5 +1,6 @@
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
+
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/Users/nanda/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
@@ -15,11 +16,6 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 conda activate dev
-
-powerline-daemon -q
-POWERLINE_BASH_CONTINUATION=1
-POWERLINE_BASH_SELECT=1
-. /Users/nanda/miniconda3/envs/dev/lib/python3.7/site-packages/powerline/bindings/bash/powerline.sh
 
 export LDFLAGS="-L/usr/local/opt/opencv@3/lib"
 export CPPFLAGS="-I/usr/local/opt/opencv@3/include"
@@ -37,8 +33,4 @@ fi
 
 source ~/.git_shortcuts
 
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/nanda/miniconda3/gcloudsdk/path.bash.inc' ]; then . '/Users/nanda/miniconda3/gcloudsdk/path.bash.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/nanda/miniconda3/gcloudsdk/completion.bash.inc' ]; then . '/Users/nanda/miniconda3/gcloudsdk/completion.bash.inc'; fi
+export PATH="$PATH:~/miniconda3/gcloudsdk/bin"
