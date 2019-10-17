@@ -32,5 +32,3 @@ else
 fi
 
 source ~/.git_shortcuts
-
-export PATH="$PATH:~/miniconda3/gcloudsdk/bin"
