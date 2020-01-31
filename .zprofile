@@ -22,7 +22,7 @@ export CPPFLAGS="-I/usr/local/opt/opencv@3/include"
 export PKG_CONFIG_PATH="/usr/local/opt/opencv@3/lib/pkgconfig"
 export PATH="$PATH:/usr/local/sbin"
 export PATH="$PATH:/usr/local/mysql/bin"
-export PATH="/Applications/Racket/bin"
+export PATH="$PATH:/Applications/Racket/bin"
 
 export GPG_TTY=$(tty)
 [ -f ~/.gnupg/gpg-agent-info ] && source ~/.gnupg/gpg-agent-info
@@ -33,3 +33,4 @@ else
 fi
 
 source ~/.git_shortcuts
+source ~/.utility_shortcuts
