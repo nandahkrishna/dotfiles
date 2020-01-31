@@ -1,6 +1,8 @@
-if [ $# != 1 ]
-then
-  echo "Usage: mdtopdf file"
-  exit 1
-fi
-markdown $1.md | htmldoc --cont --headfootsize 8.0 --linkcolor blue --linkstyle plain --format pdf14 - > $1.pdf
+function mdtopdf() {
+  if [ $# != 1 ]
+  then
+    echo "Usage: mdtopdf file"
+  else
+    markdown $1.md | htmldoc --cont --headfootsize 8.0 --linkcolor blue --linkstyle plain --format pdf14 - > $1.pdf
+  fi
+}
