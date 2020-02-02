@@ -23,6 +23,7 @@ export PKG_CONFIG_PATH="/usr/local/opt/opencv@3/lib/pkgconfig"
 export PATH="$PATH:/usr/local/sbin"
 export PATH="$PATH:/usr/local/mysql/bin"
 export PATH="$PATH:/Applications/Racket/bin"
+export BAT_CONFIG_PATH="~/.batconfig"
 
 export GPG_TTY=$(tty)
 [ -f ~/.gnupg/gpg-agent-info ] && source ~/.gnupg/gpg-agent-info
