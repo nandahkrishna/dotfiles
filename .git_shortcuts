@@ -20,7 +20,7 @@ function pushob() {
 }
 
 function commit() {
-  git commit -m "$1"
+  git commit -m $1
 }
 
 function add() {
@@ -43,10 +43,42 @@ function addmyorigin() {
   addorigin nandahkrishna/$1
 }
 
+function cb() {
+  git checkout $(git show-ref --verify --quiet refs/heads/$1 || echo '-b') $1
+}
+
+function cm() {
+  git checkout master
+}
+
+function delb() {
+  git branch -D $1
+}
+
 function acp() {
   add
-  commit "$1"
+  commit $1
   pushob
+}
+
+function rebase() {
+  git rebase -i $1
+}
+
+function acrp() {
+  add
+  commit $1
+  git fetch $2 $3
+  rebase $2/$3
+  pushob
+}
+
+function acrpum() {
+  acrp $1 upstream master
+}
+
+function acrpom() {
+  acrp $1 origin master
 }
 
 function clone() {

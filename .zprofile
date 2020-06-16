@@ -24,17 +24,20 @@ export PATH="$PATH:/usr/local/sbin"
 export PATH="$PATH:/usr/local/mysql/bin"
 export PATH="$PATH:/Applications/Racket/bin"
 export PATH="$PATH:/Users/nanda/miniconda3/nvim-osx64/bin"
+export PATH="$PATH:/Users/nanda/Library/Android/sdk/platform-tools"
+export PATH="/usr/local/opt/ruby/bin:$PATH"
+export PATH="/Users/nanda/.gem/ruby/2.7.0/bin:$PATH"
 export BAT_CONFIG_PATH="/Users/nanda/.batconfig"
+export EDITOR="/Users/nanda/miniconda3/nvim-osx64/bin/nvim"
+alias vim="nvim"
 
 export GPG_TTY=$(tty)
-[ -f ~/.gnupg/gpg-agent-info ] && source ~/.gnupg/gpg-agent-info
-if [ -S "${GPG_AGENT_INFO%%:*}" ]; then
+
+if [ -f ~/.gnupg/.gpg-agent-info ] && [ -n "$(pgrep gpg-agent)" ]; then
+    source ~/.gnupg/.gpg-agent-info
     export GPG_AGENT_INFO
 else
-    eval $( gpg-agent --quiet --daemon --options ~/.gnupg/gpg-agent.conf )
+    eval $(gpg-agent --daemon --quiet --options ~/.gnupg/gpg-agent.conf)
 fi
-
-source ~/.git_shortcuts
-source ~/.utility_shortcuts
 
 clear

@@ -102,6 +102,13 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+source ~/.git_shortcuts
+_git 2>/dev/null
+compdef __git_branch_names cb delb
+
+source ~/.utility_shortcuts
+
+source ~/.homebrew_shortcuts
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/nanda/miniconda3/gcloudsdk/path.zsh.inc' ]; then . '/Users/nanda/miniconda3/gcloudsdk/path.zsh.inc'; fi

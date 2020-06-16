@@ -1,8 +1,30 @@
-function mdtopdf() {
+function mdtopdf {
   if [ $# != 1 ]
   then
     echo "Usage: mdtopdf file"
   else
     markdown $1.md | htmldoc --cont --headfootsize 8.0 --linkcolor blue --linkstyle plain --format pdf14 - > $1.pdf
   fi
+}
+
+function tomcat {
+  if [ $# != 1 ]
+  then
+    echo "Usage: tomcat start|stop"
+    return 1
+  fi
+  if [ $1 = "start" ]
+  then
+    /Library/Tomcat/bin/startup.sh
+  elif [ $1 = "stop" ]
+  then
+    /Library/Tomcat/bin/shutdown.sh
+  else
+    echo "Usage: tomcat start|stop"
+    return 1
+  fi
+}
+
+function xampp {
+  open /Applications/XAMPP/xamppfiles/manager-osx.app
 }

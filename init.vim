@@ -12,7 +12,9 @@ call plug#end()
 " General configuration
 syntax enable
 colorscheme dracula
-:set number
+set number
+set laststatus=2
+set noshowmode
 
 " Lightline configuration
 let g:lightline = {
