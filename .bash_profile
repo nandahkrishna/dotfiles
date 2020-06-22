@@ -42,3 +42,6 @@ if [ -f '/Users/nanda/miniconda3/gcloudsdk/path.bash.inc' ]; then . '/Users/nand
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/nanda/miniconda3/gcloudsdk/completion.bash.inc' ]; then . '/Users/nanda/miniconda3/gcloudsdk/completion.bash.inc'; fi
+
+# bash-completion
+[[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
