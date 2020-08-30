@@ -29,6 +29,9 @@ export PATH="/usr/local/opt/ruby/bin:$PATH"
 export PATH="/Users/nanda/.gem/ruby/2.7.0/bin:$PATH"
 export BAT_CONFIG_PATH="/Users/nanda/.batconfig"
 export EDITOR="/Users/nanda/miniconda3/nvim-osx64/bin/nvim"
+export PATH="$PATH:/usr/local/opt/llvm/bin/"
+export TVM_HOME="/Users/nanda/tvm"
+export PYTHONPATH="$TVM_HOME/python:$PYTHONPATH"
 alias vim="nvim"
 
 export GPG_TTY=$(tty)

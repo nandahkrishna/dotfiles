@@ -65,6 +65,14 @@ function rebase() {
   git rebase -i $1
 }
 
+function rom() {
+  rebase origin/master
+}
+
+function rum() {
+  rebase upstream/master
+}
+
 function acrp() {
   add
   commit $1
