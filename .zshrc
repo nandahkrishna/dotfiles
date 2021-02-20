@@ -14,6 +14,7 @@ SPACESHIP_TIME_SHOW=true
 SPACESHIP_EXEC_TIME_ELAPSED=5
 SPACESHIP_BATTERY_SHOW=always
 SPACESHIP_EXIT_CODE_SHOW=true
+SPACESHIP_DOCKER_SHOW=false
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -105,13 +106,14 @@ source $ZSH/oh-my-zsh.sh
 source ~/.git_shortcuts
 _git 2>/dev/null
 compdef __git_branch_names cb delb
-
 source ~/.utility_shortcuts
-
 source ~/.homebrew_shortcuts
+source ~/.env_vars
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/nanda/miniconda3/gcloudsdk/path.zsh.inc' ]; then . '/Users/nanda/miniconda3/gcloudsdk/path.zsh.inc'; fi
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/nanda/miniconda3/gcloudsdk/completion.zsh.inc' ]; then . '/Users/nanda/miniconda3/gcloudsdk/completion.zsh.inc'; fi
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"

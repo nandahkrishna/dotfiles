@@ -24,23 +24,22 @@ export PATH="$PATH:/usr/local/sbin"
 export PATH="$PATH:/usr/local/mysql/bin"
 export PATH="$PATH:/Applications/Racket/bin"
 export PATH="$PATH:/Users/nanda/miniconda3/nvim-osx64/bin"
-export PATH="$PATH:/Users/nanda/Library/Android/sdk/platform-tools"
 export PATH="/usr/local/opt/ruby/bin:$PATH"
-export PATH="/Users/nanda/.gem/ruby/2.7.0/bin:$PATH"
+export PATH="/Users/nanda/.gem/ruby/3.0.0/bin:$PATH"
 export BAT_CONFIG_PATH="/Users/nanda/.batconfig"
 export EDITOR="/Users/nanda/miniconda3/nvim-osx64/bin/nvim"
 export PATH="$PATH:/usr/local/opt/llvm/bin/"
 export TVM_HOME="/Users/nanda/tvm"
 export PYTHONPATH="$TVM_HOME/python:$PYTHONPATH"
+export NODE_PATH="/usr/local/lib/node_modules"
+export ANDROID_SDK_ROOT="/Users/nanda/Library/Android/sdk"
+export ANDROID_HOME="/Users/nanda/Library/Android/sdk"
+export ANDROID_AVD_HOME="/Users/nanda/.android/avd"
+export PATH="$PATH:$ANDROID_HOME/emulator"
+export PATH="$PATH:$ANDROID_HOME/tools"
+export PATH="$PATH:$ANDROID_HOME/tools/bin"
+export PATH="$PATH:$ANDROID_HOME/platform-tools"
 alias vim="nvim"
 
 export GPG_TTY=$(tty)
-
-if [ -f ~/.gnupg/.gpg-agent-info ] && [ -n "$(pgrep gpg-agent)" ]; then
-    source ~/.gnupg/.gpg-agent-info
-    export GPG_AGENT_INFO
-else
-    eval $(gpg-agent --daemon --quiet --options ~/.gnupg/gpg-agent.conf)
-fi
-
-clear
+gpgconf --launch gpg-agent
