@@ -1,11 +1,9 @@
-# AppleScript - Launch a new Terminal window
+# AppleScript - Launch a new iTerm window
 # Uncomment the next line and last line to use as an Automator shortcut
 # My shortcut: Command-F6
 # on run {input, parameters}
-	tell application "Terminal"
-		if it is running then
-			do script ""
-		else
+	tell application "iTerm"
+		if it is not running then
 			reopen
 		end if
 		activate
