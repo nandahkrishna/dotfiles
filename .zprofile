@@ -17,20 +17,14 @@ unset __conda_setup
 # <<< conda initialize <<<
 conda activate dev
 
-export LDFLAGS="-L/usr/local/opt/opencv@3/lib"
-export CPPFLAGS="-I/usr/local/opt/opencv@3/include"
-export PKG_CONFIG_PATH="/usr/local/opt/opencv@3/lib/pkgconfig"
 export PATH="$PATH:/usr/local/sbin"
 export PATH="$PATH:/usr/local/mysql/bin"
 export PATH="$PATH:/Applications/Racket/bin"
-export PATH="$PATH:/Users/nanda/miniconda3/nvim-osx64/bin"
-export PATH="/usr/local/opt/ruby/bin:$PATH"
-export PATH="/Users/nanda/.gem/ruby/3.0.0/bin:$PATH"
 export BAT_CONFIG_PATH="/Users/nanda/.batconfig"
-export EDITOR="/Users/nanda/miniconda3/nvim-osx64/bin/nvim"
+export EDITOR="/usr/local/bin/nvim"
+export MICRO_TRUECOLOR=1
 export PATH="$PATH:/usr/local/opt/llvm/bin/"
 export TVM_HOME="/Users/nanda/tvm"
-export PYTHONPATH="$TVM_HOME/python:$PYTHONPATH"
 export NODE_PATH="/usr/local/lib/node_modules"
 export ANDROID_SDK_ROOT="/Users/nanda/Library/Android/sdk"
 export ANDROID_HOME="/Users/nanda/Library/Android/sdk"
@@ -39,7 +33,13 @@ export PATH="$PATH:$ANDROID_HOME/emulator"
 export PATH="$PATH:$ANDROID_HOME/tools"
 export PATH="$PATH:$ANDROID_HOME/tools/bin"
 export PATH="$PATH:$ANDROID_HOME/platform-tools"
+export MUJOCO_PY_MUJOCO_PATH="/Users/nanda/.mujoco/mujoco200"
+export MUJOCO_PY_MJKEY_PATH="/Users/nanda/.mujoco/mjkey.txt"
+# export PYTHONPATH="$TVM_HOME/python:$PYTHONPATH"
 alias vim="nvim"
 
-export GPG_TTY=$(tty)
+export GPG_TTY=$TTY
 gpgconf --launch gpg-agent
+eval "$(pyenv init --path)"
+export PYENV_VIRTUALENV_DISABLE_PROMPT=1
+if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi

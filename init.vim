@@ -14,6 +14,7 @@ colorscheme dracula
 set number
 set laststatus=2
 set noshowmode
+set whichwrap+=<,>,[,]
 
 " Lightline configuration
 let g:lightline = {

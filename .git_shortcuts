@@ -52,7 +52,7 @@ function cm() {
 }
 
 function delb() {
-  git branch -D $1
+  git branch -D $*
 }
 
 function acp() {
@@ -91,4 +91,12 @@ function acrpom() {
 
 function clone() {
   git clone https://github.com/$1/$2
+}
+
+function branches() {
+  git --no-pager branch
+}
+
+function prbranches() {
+  git branch | grep -v -e "master" -e "stable"
 }

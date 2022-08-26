@@ -28,3 +28,11 @@ function tomcat {
 function xampp {
   open /Applications/XAMPP/xamppfiles/manager-osx.app
 }
+
+function sha256url {
+  curl -sL "$1" | shasum -a 256
+}
+
+function pretty_csv {
+  $HOME/dotfiles/pretty_csv.sh $1
+}

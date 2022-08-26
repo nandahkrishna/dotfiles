@@ -74,7 +74,7 @@ HIST_STAMPS="dd.mm.yyyy"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(battery copyfile django extract osx python web-search z zsh-autosuggestions zsh-completions zsh-syntax-highlighting)
+plugins=(battery copyfile extract macos python web-search z zsh-autosuggestions zsh-completions zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -109,6 +109,8 @@ compdef __git_branch_names cb delb
 source ~/.utility_shortcuts
 source ~/.homebrew_shortcuts
 source ~/.env_vars
+export HOMEBREW_BAT=1
+export HOMEBREW_BAT_CONFIG_PATH="/Users/nanda/.batconfig"
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/nanda/miniconda3/gcloudsdk/path.zsh.inc' ]; then . '/Users/nanda/miniconda3/gcloudsdk/path.zsh.inc'; fi
@@ -117,3 +119,7 @@ if [ -f '/Users/nanda/miniconda3/gcloudsdk/path.zsh.inc' ]; then . '/Users/nanda
 if [ -f '/Users/nanda/miniconda3/gcloudsdk/completion.zsh.inc' ]; then . '/Users/nanda/miniconda3/gcloudsdk/completion.zsh.inc'; fi
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+# Initialise rbenv and pyenv
+eval "$(rbenv init - zsh)"
+eval "$(pyenv init -)"
